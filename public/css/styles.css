@@ -1,0 +1,175 @@
+body{
+  background-color:#f2f2f2; 
+}
+h1{
+  font-family: 'Bree Serif', serif;
+}
+.setwidth{
+  width:70%;
+  margin:auto;
+}
+.purple{
+  color: blueviolet;
+}
+.center{
+  text-align:center;
+}
+.small{
+  font-size: small;
+  font-weight: lighter;
+  font-family: 'Bree Serif', serif;
+  color: gray;
+}
+.container-fluid {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    min-height: calc( 100vh - 180px )
+}
+
+
+/* All about navbar */
+.navbar {
+    background-color: blueviolet;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-brand{
+    color:#fff !important;
+}
+.navbar-nav  li a{
+  color: #fff !important; 
+}
+.navbar-nav  li a:hover {
+    color: blanchedalmond !important;
+}
+.navbar-nav .btn {
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  border-color: whitesmoke;
+}
+/* 
+All about Footer */
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: blueviolet ;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+
+.intro-content {
+    margin: auto;
+    text-align: center;
+  }
+.intro-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Alata', sans-serif;
+  }
+.intro-content h4 {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Bree Serif', serif;
+  }
+/* body */
+.post-box {
+  padding: 2%;
+  margin: 4rem 8rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 5px 30px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.post-para {
+  font-size: 2rem;
+}
+.post-title {
+  color: black;
+  font-size: 3rem;
+}
+.card-body {
+  padding: 0 4rem;
+}
+.card-subtitle{
+  font-style: italic;
+  color: gray;
+}
+.sign{
+  max-width: 37%;
+  margin: auto;
+}
+
+.submit {
+  margin:5px 0;
+  font-size: 18px;
+  border-radius:8px;
+  padding: 2px;
+  width:100%;   
+  background-color: #1e90ff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit:hover{
+  background-color: #1c85ee;
+}
+
+h5 a{
+  color: #1e90ff;
+}
+
+#compose{
+  width:70%;
+  margin: auto;
+}
+
+.publish{
+ 
+  font-size: 15px;
+  border-radius:8px;  
+  width: 20%;
+  background-color: #1e90ff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.publish:hover{
+  background-color: #1c85ee;
+}
+
+
+@media (max-width: 480px) {
+  .post-box {
+    width: 100%;
+    margin: 2% auto;
+  }
+  .submit,.publish{
+    font-size: 10px;
+  }}
+
+  @media (max-width:408px){
+    .container-fluid{
+      display: block;
+      text-align: center;
+    }
+  }
