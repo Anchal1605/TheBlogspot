@@ -163,13 +163,33 @@ h5 a{
     width: 100%;
     margin: 2% auto;
   }
-  .submit,.publish{
-    font-size: 10px;
-  }}
 
-  @media (max-width:408px){
-    .container-fluid{
-      display: block;
-      text-align: center;
-    }
+  .intro-content h1 {
+    font-size: 3rem;
   }
+
+  .post-para,
+  .intro-content h4 {
+    font-size: 1.5rem;
+  }
+  .post-title {
+    font-size: 2rem;
+  }
+  .card-body {
+    padding: 0 4rem;
+  }
+  .card-subtitle {
+    font-size: 12px;
+  }
+  .publish,.submit {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width:408px){
+  .intro-content{
+    display: block;
+    text-align: center;
+  }
+}
