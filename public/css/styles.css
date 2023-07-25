@@ -158,38 +158,73 @@ h5 a{
 }
 
 
+
+#hamburger-menu {
+  background-color: blueviolet;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 480px) {
   .post-box {
     width: 100%;
     margin: 2% auto;
   }
 
-  .intro-content h1 {
-    font-size: 3rem;
+  .sign{
+    max-width: 60%;
+    margin: auto;
   }
 
-  .post-para,
-  .intro-content h4 {
-    font-size: 1.5rem;
+}
+
+@media (max-width:480px) {
+  .container-fluid {
+    display: block;
   }
-  .post-title {
-    font-size: 2rem;
+
+}
+
+@media (max-width:767px) {
+  .navbar {
+    display: flex;
+    text-align: center;
   }
-  .card-body {
-    padding: 0 4rem;
+
+  .container {
+    width: 50%;
   }
-  .card-subtitle {
-    font-size: 12px;
+  .input-text{
+    width:auto;
   }
-  .publish,.submit {
-    padding: 5px 10px;
-    font-size: 13px;
+  .submit{
+    width: 202px;
+  }
+  .publish{
+    width:100px;
+  }
+ 
+}
+
+@media (min-width:767px) {
+  #hamburger-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: block;
   }
 }
 
-@media (max-width:408px){
-  .intro-content{
+@media (max-width:767px) {
+  #hamburger-menu {
     display: block;
-    text-align: center;
+  }
+
+  .close-menu {
+    display: none;
   }
 }
