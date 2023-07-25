@@ -157,19 +157,60 @@ h5 a{
   background-color: #1c85ee;
 }
 
+#hamburger-menu {
+  background-color: blueviolet;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (max-width: 480px) {
   .post-box {
     width: 100%;
     margin: 2% auto;
   }
-  .submit,.publish{
-    font-size: 10px;
-  }}
 
-  @media (max-width:408px){
-    .container-fluid{
-      display: block;
-      text-align: center;
-    }
+  .submit,
+  .publish {
+    font-size: 10px;
   }
+}
+
+@media (max-width:480px) {
+  .container-fluid {
+    display: block;
+  }
+}
+
+@media (max-width:767px) {
+  .navbar {
+    display: flex;
+    text-align: center;
+  }
+
+  .container {
+    width: 50%;
+  }
+}
+
+@media (min-width:767px) {
+  #hamburger-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: block;
+  }
+}
+
+@media (max-width:767px) {
+  #hamburger-menu {
+    display: block;
+  }
+
+  .close-menu {
+    display: none;
+  }
+}

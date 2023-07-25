@@ -2,43 +2,66 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>TheBlogSpot</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alata&family=Bree+Serif&family=Lora&family=Simonetta&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/a1653c677e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Bree+Serif&family=Lora&family=Simonetta&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/15e4344681.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/styles.css">
 
-  </head>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <p class="navbar-brand">TheBlogSpot</p>
-      </div>
-        <ul class="nav navbar-nav ">
-          <!-- 6 -->
-          <li id="home"><a href="/">HOME</a></li>
-          <li id="about"><a href="/about">ABOUT</a></li>
-          <li id="contact"><a href="/contact">CONTACT</a></li>
+</head>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <p class="navbar-brand">TheBlogSpot</p>
+      <button id="hamburger-menu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=""
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse close-menu">
+      <ul class="nav navbar-nav">
+        <!-- 6 -->
+        <li id="home"><a href="/">HOME</a></li>
+        <li id="about"><a href="/about">ABOUT</a></li>
+        <li id="contact"><a href="/contact">CONTACT</a></li>
+      </ul>
+      <% if(authenticated){%>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="login"><a class="btn btn-primary navbar-btn" href="/logout">Logout</a></li>
+          <li id="register"><a class="btn btn-primary navbar-btn" href="/compose">Compose</a></li>
         </ul>
-        <% if(authenticated){%>
-          <ul class="nav navbar-nav navbar-right">
-            <li id="login"><a class="btn btn-primary navbar-btn" href="/logout">Logout</a></li>
-            <li id="register"><a class="btn btn-primary navbar-btn" href="/compose">Compose</a></li>
-           
-          </ul>
         <%}else{%>
           <ul class="nav navbar-nav navbar-right">
             <li id="login"><a class="btn btn-primary navbar-btn" href="/login">Login</a></li>
             <li id="register"><a class="btn btn-primary navbar-btn" href="/register">Register</a></li>
-           
           </ul>
-        <%}%>
+          <%}%>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <body>
-    <div class="container-fluid">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var hamburgerMenuButton = document.getElementById('hamburger-menu');
+    hamburgerMenuButton.addEventListener('click', function () {
+      var navbarCollapseElements = document.getElementsByClassName('navbar-collapse');
+      for (var i = 0; i < navbarCollapseElements.length; i++) {
+        navbarCollapseElements[i].classList.toggle('close-menu');
+      }
+    });
+  });
+</script>
+
+<body>
+  <div class="container-fluid">
