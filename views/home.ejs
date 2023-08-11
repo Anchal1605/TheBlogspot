@@ -28,13 +28,13 @@
                                     <% if(userLikedPosts.includes(post._id)) { %>
                                         <input type="hidden" name="postId" value="<%=post._id%>">
                                         <button class='btn  btn-xs' type="submit" name="liked" value='false'><i
-                                                class="fa-solid fa-thumbs-up"></i> Liked</button><span>
+                                                class="fa fa-solid fa-thumbs-up"></i> Liked</button><span>
                                             <%=post.likes%> people like this.
                                         </span>
                                         <% } else { %>
                                             <input type="hidden" name="postId" value="<%=post._id%>">
                                             <button class='btn  btn-xs' type="submit" name="liked" value='true'><i
-                                                    class="fa-regular fa-thumbs-up"></i>
+                                                    class="fa fa-regular fa-thumbs-up"></i>
                                                 Like</button> <span class="small">
                                                 <%= post.likes%> people liked this.
                                             </span>
